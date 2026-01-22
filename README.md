@@ -38,3 +38,12 @@ Border: The image should have a decorative border composed of Traditional Japane
   <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+I+am+Rithy!;I+am+a+Content+Creator;I+Love+AI+Art!&center=true&width=400&height=50">
 </a>
 
+
+<div align="center">
+  <h3>បច្ចេកវិទ្យាដែលខ្ញុំប្រើ៖</h3>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,python,vscode,github,photoshop,ai&theme=dark" />
+  </a>
+</div>
+
+
