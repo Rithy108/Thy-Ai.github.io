@@ -30,3 +30,15 @@ Border: The image should have a decorative border composed of Traditional Japane
 
 > [!NOTE]
 > **Need to input the required information in {} in the prompt**
+
+<table>
+  <tr>
+    <td width="60%">
+      <h1>សួស្តី! នេះជាពិភព Fantasy របស់ខ្ញុំ 🧙‍♂️</h1>
+      <p>ខ្ញុំចូលចិត្តបង្កើតរូបភាព AI និងសិក្សាពីបច្ចេកវិទ្យាថ្មីៗ។</p>
+    </td>
+    <td width="40%">
+      <img src="Images/your-fantasy-art.jpg" width="100%">
+    </td>
+  </tr>
+</table>
