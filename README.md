@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/Image/logo.jpg"  alt="រិទ្ធី"> 
+<img src="images/logo.jpg"  alt="រិទ្ធី"> 
 
 ## 🍌 Introduction
 
