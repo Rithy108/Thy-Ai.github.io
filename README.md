@@ -14,7 +14,7 @@ Welcome to the Nano-banana curated image gallery! 🤗
 ពត៌មាននិងធ្វើបច្ចុប្បន្នភាពនៅពេលក្រោយ
 # 🍌🅰🅸 🅿🆁🅾🅼🅿🆃🧚
 
-### 1:ឆ្លាក់ឈ្មោះ នៅសមុទ្រ
+### 1:កែប្រែរូបចាស់ឲ្យច្បាស់ថ្មី
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
@@ -22,13 +22,7 @@ Welcome to the Nano-banana curated image gallery! 🤗
 **Prompt:**
 
 ```
-Core Instruction: A Japanese Ukiyoe style collectible trading card design, vertical composition. The illustration style needs to closely mimic the visual aesthetics of "Demon Slayer", features include: ink outlines with varying thickness, traditional woodblock print color schemes, and dramatic dynamic composition.
-
-Subject Description: The card protagonist is {Character Name} (Title: {Hashira Name/Title}), in a dynamic fighting pose, holding {Weapon Description}. The character is performing {Breathing Style Move Name}, surrounded by {Visual Effect Description} (e.g., giant flames / water dragon / whirlwind), these effects need to be presented in Traditional Japanese Sumi-e style.
-
-Background and Material: The background needs to blend textured Holographic Foil effect, shimmering beneath the traditional ink elements.
-
-Border: The image should have a decorative border composed of Traditional Japanese Patterns (such as Seigaiha or Asanoha). At the bottom, there is a stylized banner with "{Japanese Kanji Name}" written in ancient Japanese calligraphy.
+Restore this old, damaged photograph to look clear and natural while preserving the original identity and details. Remove scratches, dust, stains, creases, and film grain. Fix fading, discoloration, and uneven lighting. Reconstruct missing or damaged areas accurately. Enhance sharpness and facial details without over-smoothing. Correct contrast and exposure. Apply realistic colorization if the photo is black and white, keeping skin tones, clothing, and background historically accurate. Maintain the original pose, expression, and proportions. Do not alter facial features, age, or identity. Final result should look like a professionally restored high-quality photograph, not AI-generated. Keep original aspect ratio.
 ```
 
 > [!ចំណាំ]
