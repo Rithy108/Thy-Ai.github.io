@@ -39,38 +39,6 @@ Border: The image should have a decorative border composed of Traditional Japane
 </a>
 
 
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" />
-</div>
-
-
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hello%20World&fontSize=80&animation=fadeIn" width="100%"/>
-  
-  </div>
-
-<br/>
-
-<div align="center">
-  <h3>🛠️ My Creative Tools</h3>
-  <img src="https://skillicons.dev/icons?i=python,html,css,github,vscode,figma,ps,ai&perline=8" />
-</div>
-
-<br/>
-
-<div align="center">
-  <table>
-    <tr>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=Thy-Ai&show_icons=true&theme=tokyonight&hide_border=true" height="150" />
-      </td>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thy-Ai&layout=compact&theme=tokyonight&hide_border=true" height="150" />
-      </td>
-    </tr>
-  </table>
-</div>
 
 <div align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
