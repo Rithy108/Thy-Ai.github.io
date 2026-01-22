@@ -2,7 +2,7 @@
 
 ![Logo](Images/logo.jpg)
 
-#### ✨សូមស្វាគមន៍!✨
+#  ✨សូមស្វាគមន៍!✨
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.herokuapp.com/?lines=សួស្ដី!;ខ្ញុំ+បាទ+ឈ្មោះ+រិទ្ធី!;I+am+a+Content+Creator;I+Love+AI+Art!&center=true&width=400&height=50">
 </a>
