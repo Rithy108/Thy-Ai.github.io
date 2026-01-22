@@ -36,9 +36,5 @@ Border: The image should have a decorative border composed of Traditional Japane
 </a>
 
 
-<div align="center">
-  <img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="30"/>
-  <h1>Level 2 Sophomore Student</h1>
-  <img src="https://media.giphy.com/media/swhRkVYLJDrCE/giphy.gif" width="100%"/>
-</div>
+![Visitor Count](https://profile-counter.glitch.me/Thy-Ai/count.svg)
 
