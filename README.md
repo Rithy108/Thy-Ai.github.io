@@ -34,3 +34,6 @@ Border: The image should have a decorative border composed of Traditional Japane
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+I+am+Rithy!;I+am+a+Content+Creator;I+Love+AI+Art!&center=true&width=400&height=50">
 </a>
+
+
+![Cyberpunk Header](https://capsule-render.vercel.app/api?type=rect&color=0:000000,100:303030&height=200&section=header&text=AI%20Creator&fontSize=80&fontColor=00ffff&animation=fadeIn&stroke=00ffff&strokeWidth=2)
