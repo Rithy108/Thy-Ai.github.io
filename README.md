@@ -12,7 +12,7 @@ Welcome to the Nano-banana curated image gallery! 🤗
 # 🍌 Ai Prompt🧚
 
 ### 1:ឆ្លាក់ឈ្មោះ នៅសមុទ្រ
-|                              Output                              |
+|                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
 
