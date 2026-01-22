@@ -67,6 +67,20 @@ Transparent background (no scenery or setting)
 > **Need to input the required information in {} in the prompt**
 
 
+###  :មនុស្សអទិទេពធាតុទាំងបួន
+|                              រូបឧទាហរណ៍                              |
+| :------------------------------------------------------------: |
+| <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
+
+**Prompt:**
+
+```
+A highly realistic photo of a young man is a deity. His body is composed of ocean water that flows and is clear, while the other half is made of earth. His skin is natural and highly detailed with visible pores and a realistic texture. He has four arms, he is formed surrounded by the force of the four elements (water, earth, fire, air) on all four of his arms. Natural cinematic light, soft shadow, 8K photorealistic resolution, strong focus on the face.
+```
+
+> [!ចំណាំ]
+> **Need to input the required information in {} in the prompt**
+
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+I+am+Rithy!;I+am+a+Content+Creator;I+Love+AI+Art!&center=true&width=400&height=50">
 </a>
