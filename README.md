@@ -40,8 +40,8 @@ Border: The image should have a decorative border composed of Traditional Japane
 
 
 <div align="center">
-  <h3>🏆 ពានរង្វាន់របស់ខ្ញុំ</h3>
-  <img src="https://github-profile-trophy.vercel.app/?username=Thy-Ai&theme=radical&no-frame=true&no-bg=true&margin-w=4" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" />
 </div>
+
 
 
