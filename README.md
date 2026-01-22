@@ -31,7 +31,7 @@ Background and Material: The background needs to blend textured Holographic Foil
 Border: The image should have a decorative border composed of Traditional Japanese Patterns (such as Seigaiha or Asanoha). At the bottom, there is a stylized banner with "{Japanese Kanji Name}" written in ancient Japanese calligraphy.
 ```
 
-> [!NOTE]
+> [!ចំណាំ]
 > **Need to input the required information in {} in the prompt**
 
 <a href="https://git.io/typing-svg">
