@@ -10,3 +10,306 @@
     <p>បង្កើតឡើងដោយប្រើ GitHub Pages</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Library</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Kantumruy+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', 'Kantumruy Pro', sans-serif;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar សម្រាប់ដាក់ Prompt ថ្មី */
+        .sidebar {
+            width: 350px;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-right: 1px solid var(--border);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group { margin-bottom: 1.5rem; }
+        
+        label { 
+            display: block; 
+            margin-bottom: 0.5rem; 
+            color: var(--text-muted); 
+            font-size: 0.9rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: white;
+            font-family: inherit;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        button.btn-add {
+            width: 100%;
+            padding: 12px;
+            background: var(--accent);
+            color: #0f172a;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button.btn-add:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3); }
+
+        /* Main Content សម្រាប់បង្ហាញ */
+        .main-content {
+            margin-left: 350px;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        .header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* ការ Design Card នីមួយៗ */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #000;
+        }
+
+        .card-body { padding: 1.2rem; }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .prompt-text {
+            background: var(--bg-color);
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            height: 80px;
+            overflow-y: auto;
+            margin-bottom: 1rem;
+            border: 1px dashed var(--border);
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-icon {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-icon:hover { background: var(--bg-color); border-color: var(--accent); color: var(--accent); }
+        .btn-delete:hover { border-color: #ef4444; color: #ef4444; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
+            .main-content { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo"><i class="fas fa-brain"></i> PROMPT LAB</div>
+        
+        <div class="input-group">
+            <label>ឈ្មោះ Prompt (Title)</label>
+            <input type="text" id="inputTitle" placeholder="ឧ. រូបភាព Cyberpunk...">
+        </div>
+
+        <div class="input-group">
+            <label>Link រូបភាព (Image URL)</label>
+            <input type="text" id="inputImage" placeholder="https://example.com/image.jpg">
+            <small style="color: #64748b; font-size: 0.75rem;">*Right click លើរូបក្នុង Google > Copy Image Link</small>
+        </div>
+
+        <div class="input-group">
+            <label>អត្ថបទ Prompt (Prompt Text)</label>
+            <textarea id="inputText" rows="5" placeholder="Sora prompt: A cat walking in the rain..."></textarea>
+        </div>
+
+        <button class="btn-add" onclick="addPrompt()">+ បង្កើតថ្មី</button>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h2>បណ្ណាល័យ Prompt របស់អ្នក</h2>
+            <p style="color: var(--text-muted)">រក្សាទុកគំនិតស្រាវជ្រាវរបស់អ្នកនៅទីនេះ</p>
+        </div>
+        
+        <div class="grid-container" id="cardContainer">
+            </div>
+    </div>
+
+    <script>
+        // មុខងារទាញយកទិន្នន័យចាស់មកបង្ហាញពេលបើក Web
+        document.addEventListener('DOMContentLoaded', loadPrompts);
+
+        function addPrompt() {
+            const title = document.getElementById('inputTitle').value;
+            const image = document.getElementById('inputImage').value || 'https://via.placeholder.com/400x200?text=No+Image'; // រូបភាពជំនួសបើមិនដាក់
+            const text = document.getElementById('inputText').value;
+
+            if (title === "" || text === "") {
+                alert("សូមបំពេញឈ្មោះ និង Prompt ជាមុនសិន!");
+                return;
+            }
+
+            const promptData = {
+                id: Date.now(),
+                title: title,
+                image: image,
+                text: text
+            };
+
+            // រក្សាទុកក្នុង LocalStorage
+            saveToLocal(promptData);
+            
+            // បង្ហាញលើអេក្រង់
+            renderCard(promptData);
+
+            // លុបអក្សរក្នុងប្រអប់ចោល
+            document.getElementById('inputTitle').value = '';
+            document.getElementById('inputImage').value = '';
+            document.getElementById('inputText').value = '';
+        }
+
+        function renderCard(data) {
+            const container = document.getElementById('cardContainer');
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.id = data.id;
+            card.innerHTML = `
+                <img src="${data.image}" class="card-img" alt="Prompt Image">
+                <div class="card-body">
+                    <div class="card-title">${data.title}</div>
+                    <div class="prompt-text" id="text-${data.id}">${data.text}</div>
+                    <div class="card-actions">
+                        <button class="btn-icon" onclick="copyText('${data.id}')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="btn-icon btn-delete" onclick="deletePrompt(${data.id})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+            // ដាក់ចូលទៅខាងលើគេ
+            container.prepend(card);
+        }
+
+        function copyText(id) {
+            const text = document.getElementById(`text-${id}`).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("បាន Copy Prompt ទុកហើយ!");
+            });
+        }
+
+        // មុខងាររក្សាទុកទិន្នន័យ
+        function saveToLocal(data) {
+            let prompts = JSON.parse(localStorage.getItem('myPrompts')) || [];
+            prompts.push(data);
+            localStorage.setItem('myPrompts', JSON.stringify(prompts));
+        }
+
+        // មុខងារទាញទិន្នន័យមកបង្ហាញ
+        function loadPrompts() {
+            let prompts = JSON.parse(localStorage.getItem('myPrompts')) || [];
+            prompts.forEach(prompt => renderCard(prompt));
+        }
+
+        // មុខងារលុប
+        function deletePrompt(id) {
+            if(confirm("តើអ្នកចង់លុបមែនទេ?")) {
+                let prompts = JSON.parse(localStorage.getItem('myPrompts')) || [];
+                prompts = prompts.filter(p => p.id !== id);
+                localStorage.setItem('myPrompts', JSON.stringify(prompts));
+                
+                // លុបចេញពីអេក្រង់
+                document.getElementById(id).remove();
+            }
+        }
+    </script>
+</body>
+</html>
