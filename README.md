@@ -3,6 +3,9 @@
 ![Logo](Images/logo.jpg)
 
 ## ✨សូមស្វាគមន៍!✨
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+សួស្ដី+ខ្ញុំឈ្មោះ+រិទ្ធី!;I+am+a+Content+Creator;I+Love+AI+Art!&center=true&width=400&height=50">
+</a>
 
 Welcome to the Nano-banana curated image gallery! 🤗 
 
@@ -34,7 +37,4 @@ Border: The image should have a decorative border composed of Traditional Japane
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+I+am+Rithy!;I+am+a+Content+Creator;I+Love+AI+Art!&center=true&width=400&height=50">
 </a>
-
-
-![Visitor Count](https://profile-counter.glitch.me/Thy-Ai/count.svg)
 
