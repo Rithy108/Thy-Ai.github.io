@@ -1,2 +1,12 @@
 # Thy-Ai.github.io
 ប្រមូលផ្ដុំPrompt
+<!DOCTYPE html>
+<html>
+<head>
+    <title>គេហទំព័ររបស់ខ្ញុំ</title>
+</head>
+<body style="background-color: #f0f0f0; text-align: center; font-family: Arial, sans-serif;">
+    <h1 style="color: #007acc;">សួស្តី! នេះគឺជាគេហទំព័រដំបូងរបស់ខ្ញុំ</h1>
+    <p>បង្កើតឡើងដោយប្រើ GitHub Pages</p>
+</body>
+</html>
