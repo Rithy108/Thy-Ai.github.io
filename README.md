@@ -1,4 +1,4 @@
 <div align="center">
 
-<img src="images/logo.jpg"  alt="输入图片"> 
+<img src="images/logo.jpg"  alt="រិទ្ធី"> 
 
