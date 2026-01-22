@@ -81,6 +81,17 @@ A highly realistic photo of a young man is a deity. His body is composed of ocea
 > [!ចំណាំ]
 > **Need to input the required information in {} in the prompt**
 
+
+###  :គូស្នេហ៍បណ្ដែតប្រទីបក្រោមពន្លឺព្រះចន្ទ
+|                              រូបឧទាហរណ៍                              |
+| :------------------------------------------------------------: |
+| <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
+
+**Prompt:**
+
+```
+Hyper-realistic portrait of a young Khmer couple standing on a wooden pier by a lotus pond at night. The man is wearing a traditional gold-toned silk "Pidan" jacket and "Sampot Chang Kben." The woman is wearing a white "Bopha" blouse with a gold silk "Sbai" draped over her shoulder and a patterned "Sampot." Both are holding decorated "Kanthong" baskets with glowing candles, incense, and flowers. A bright full moon hangs in a deep blue twilight sky. Natural soft lighting from the moon and warm golden glow from the candles, visible incense smoke, realistic skin textures, 8k resolution, cinematic composition, shot on 85mm lens.
+```
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+I+am+Rithy!;I+am+a+Content+Creator;I+Love+AI+Art!&center=true&width=400&height=50">
 </a>
