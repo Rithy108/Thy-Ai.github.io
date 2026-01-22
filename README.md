@@ -14,7 +14,7 @@ Welcome to the Nano-banana curated image gallery! 🤗
 ពត៌មាននិងធ្វើបច្ចុប្បន្នភាពនៅពេលក្រោយ
 # 🍌🅰🅸 🅿🆁🅾🅼🅿🆃🧚
 
-### 1:កែប្រែរូបចាស់ឲ្យច្បាស់ថ្មី
+###:កែប្រែរូបចាស់ឲ្យច្បាស់ថ្មី
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
@@ -29,7 +29,7 @@ Restore this old, damaged photograph to look clear and natural while preserving 
 > **Need to input the required information in {} in the prompt**
 
 
-### 1:កែប្រែរូបចាស់ឲ្យច្បាស់ថ្មី
+###:បង្កើតរូបទៅជាតុក្កតាតាមStyeយើង
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
@@ -37,7 +37,30 @@ Restore this old, damaged photograph to look clear and natural while preserving 
 **Prompt:**
 
 ```
-Restore this old, damaged photograph to look clear and natural while preserving the original identity and details. Remove scratches, dust, stains, creases, and film grain. Fix fading, discoloration, and uneven lighting. Reconstruct missing or damaged areas accurately. Enhance sharpness and facial details without over-smoothing. Correct contrast and exposure. Apply realistic colorization if the photo is black and white, keeping skin tones, clothing, and background historically accurate. Maintain the original pose, expression, and proportions. Do not alter facial features, age, or identity. Final result should look like a professionally restored high-quality photograph, not AI-generated. Keep original aspect ratio.
+Prompt: Transform the person in the uploaded photo into a full-body stylized Webtoon illustration character. Preserve their exact facial expression, hairstyle, outfit, accessories, and signature features - now extended to include the entire body and pose.
+Art Style:
+
+Clean, expressive Webtoon-style digital illustration
+Sharp, detailed linework with smooth shading and soft gradients
+Subtle anime influence (large eyes, smooth skin, stylized proportions) while remaining grounded in realism
+High-contrast lighting with soft highlights and clear light direction
+Face & Identity:
+Keep the subject's face highly recognizable
+Preserve unique features: eye shape, brows, lips, jawline, skin tone, and hairstyle
+Use gentle digital textures for a polished look
+Clothing & Accessories:
+Accurately recreate the full outfit and accessories from head to toe
+Simplify where needed to match Webtoon style, but retain all identifiable elements 
+
+Include visible jewelry, glasses, logos, or layered fabric details
+Pose & Framing:
+Match the subject's pose and stance from the original reference photo
+Show the entire body in-frame
+- head to shoes - with natural posture and proportions
+Grounded on a soft shadow or simple base, if needed for realism
+Background:
+
+Transparent background (no scenery or setting)
 ```
 
 > [!ចំណាំ]
