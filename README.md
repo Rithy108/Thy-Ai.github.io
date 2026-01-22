@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/logo.jpg"  alt="logo.jpg"> 
+[My Logo](images/logo.jpg) 
 
 ## 🍌 Introduction
 
