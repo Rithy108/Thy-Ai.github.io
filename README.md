@@ -40,10 +40,8 @@ Border: The image should have a decorative border composed of Traditional Japane
 
 
 <div align="center">
-  <h3>បច្ចេកវិទ្យាដែលខ្ញុំប្រើ៖</h3>
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,python,vscode,github,photoshop,ai&theme=dark" />
-  </a>
+  <h3>🏆 ពានរង្វាន់របស់ខ្ញុំ</h3>
+  <img src="https://github-profile-trophy.vercel.app/?username=Thy-Ai&theme=radical&no-frame=true&no-bg=true&margin-w=4" />
 </div>
 
 
