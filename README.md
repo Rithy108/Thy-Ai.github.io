@@ -14,7 +14,7 @@ Welcome to the Nano-banana curated image gallery! 🤗
 ពត៌មាននិងធ្វើបច្ចុប្បន្នភាពនៅពេលក្រោយ
 # 🍌🅰🅸 🅿🆁🅾🅼🅿🆃🧚
 
-###  ༺ កែប្រែរូបចាស់ឲ្យច្បាស់ថ្មី༻
+###  ༺ កែប្រែរូបចាស់ឲ្យច្បាស់ថ្មី ༻
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
@@ -29,7 +29,7 @@ Restore this old, damaged photograph to look clear and natural while preserving 
 > **Need to input the required information in {} in the prompt**
 
 
-###  ☞បង្កើតរូបទៅជាតុក្កតាតាមStyeយើង
+###  ༺ បំប្លែងរូបថតមនុស្សឱ្យទៅជាតួអង្គតុក្កតា ༻
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
