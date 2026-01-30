@@ -75,7 +75,7 @@ Transparent background (no scenery or setting)
 **Prompt:**
 
 ```
-A highly realistic photo of a young man is a deity. His body is composed of ocean water that flows and is clear, while the other half is made of earth. His skin is natural and highly detailed with visible pores and a realistic texture. He has four arms, he is formed surrounded by the force of the four elements (water, earth, fire, air) on all four of his arms. Natural cinematic light, soft shadow, 8K photorealistic resolution, strong focus on the face.
+A hyper-realistic 8K cinematic photo of a young male deity. His entire body and torso are composed of textured, solid earth and ancient stone with realistic soil grains. He has four distinct arms, each embodying a different element: one arm is made of flowing liquid water, the second arm is engulfed in vibrant flickering flames, the third arm is formed from swirling translucent air and mist, and the fourth arm is solid cracked earth. His face remains highly detailed with natural skin texture and piercing eyes. Natural cinematic lighting, deep soft shadows, dramatic atmosphere, ultra-photorealistic.Serene and elegant expression, soft porcelain skin with natural texture.
 ```
 
 > [!ចំណាំ]
