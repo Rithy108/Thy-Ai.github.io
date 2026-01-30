@@ -82,7 +82,7 @@ A hyper-realistic 8K cinematic photo of a young male deity. His entire body and 
 > **Need to input the required information in {} in the prompt**
 
 
-###  ☞គូស្នេហ៍បណ្ដែតប្រទីបក្រោមពន្លឺព្រះចន្ទ
+### ❖❀～ គូស្នេហ៍ខ្មែរក្នុងសម្លៀកបំពាក់ប្រពៃណី កាន់ប្រទីបនាពេលរាត្រី ～❀❖ 
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
