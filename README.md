@@ -14,7 +14,7 @@ Welcome to the Nano-banana curated image gallery! 🤗
 ពត៌មាននិងធ្វើបច្ចុប្បន្នភាពនៅពេលក្រោយ
 # 🍌🅰🅸 🅿🆁🅾🅼🅿🆃🧚
 
-###  :កែប្រែរូបចាស់ឲ្យច្បាស់ថ្មី
+###  ☞កែប្រែរូបចាស់ឲ្យច្បាស់ថ្មី
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
@@ -29,7 +29,7 @@ Restore this old, damaged photograph to look clear and natural while preserving 
 > **Need to input the required information in {} in the prompt**
 
 
-###  :បង្កើតរូបទៅជាតុក្កតាតាមStyeយើង
+###  ☞បង្កើតរូបទៅជាតុក្កតាតាមStyeយើង
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
@@ -67,7 +67,7 @@ Transparent background (no scenery or setting)
 > **Need to input the required information in {} in the prompt**
 
 
-###  :មនុស្សអទិទេពធាតុទាំងបួន
+###  ☞មនុស្សអទិទេពធាតុទាំងបួន
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
@@ -82,7 +82,7 @@ A highly realistic photo of a young man is a deity. His body is composed of ocea
 > **Need to input the required information in {} in the prompt**
 
 
-###  :គូស្នេហ៍បណ្ដែតប្រទីបក្រោមពន្លឺព្រះចន្ទ
+###  ☞គូស្នេហ៍បណ្ដែតប្រទីបក្រោមពន្លឺព្រះចន្ទ
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
