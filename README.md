@@ -67,7 +67,7 @@ Transparent background (no scenery or setting)
 > **Need to input the required information in {} in the prompt**
 
 
-###  ☞មនុស្សអទិទេពធាតុទាំងបួន
+### ✿༺ ទេវរូបវ័យក្មេងមួយអង្គ ដែលមានព្រះហស្ត ៤ ផ្សេងគ្នា តំណាងឱ្យធាតុទាំង ៤ (ដី ទឹក ភ្លើង ខ្យល់)༻✿
 |                              រូបឧទាហរណ៍                              |
 | :------------------------------------------------------------: |
 | <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
