@@ -1,107 +1,184 @@
-<div align="center">
+```html
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ឧបករណ៍រាប់ចំនួនអក្សរ | Rithy × Gemini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanten:wght@400;700&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hanuman', serif;
+            background-color: #f8fafc;
+        }
+        .khmer-title {
+            font-family: 'Kanten', sans-serif;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+        <!-- Header Section -->
+        <div class="text-center mb-8">
+            <h1 class="khmer-title text-3xl sm:text-4xl font-bold text-blue-800 mb-2">ឧបករណ៍រាប់ចំនួនអក្សរ</h1>
+            <p class="text-gray-600">វិភាគ និងរាប់ចំនួនដងនៃអក្សរនីមួយៗដែលមាននៅក្នុងអត្ថបទរបស់អ្នក</p>
+            <div class="mt-4 inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+                បង្កើតឡើងដោយ៖ Rithy × Gemini
+            </div>
+        </div>
 
-![Logo](Images/logo.jpg)
+        <!-- Main Card -->
+        <div class="glass-morphism rounded-2xl shadow-xl p-6 mb-8 border border-gray-200">
+            <label for="inputText" class="block text-lg font-bold text-gray-700 mb-2">សូមបញ្ចូលអត្ថបទនៅទីនេះ៖</label>
+            <textarea 
+                id="inputText" 
+                rows="8" 
+                class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-gray-800 bg-white shadow-sm mb-4"
+                placeholder="វាយ ឬចម្លងអត្ថបទរបស់អ្នកដាក់នៅទីនេះ..."></textarea>
+            
+            <div class="flex flex-wrap gap-3">
+                <button 
+                    onclick="analyzeText()" 
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg active:scale-95 flex-grow sm:flex-grow-0">
+                    វិភាគអត្ថបទ
+                </button>
+                <button 
+                    onclick="clearAll()" 
+                    class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 px-8 rounded-xl transition-all flex-grow sm:flex-grow-0">
+                    សម្អាត
+                </button>
+            </div>
+        </div>
 
-#  ✨សូមស្វាគមន៍!✨
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=សួស្ដី!;ខ្ញុំ+បាទ+ឈ្មោះ+រិទ្ធី!;I+am+a+Content+Creator;I+Love+AI+Art!&center=true&width=400&height=50">
-</a>
+        <!-- Stats Grid -->
+        <div id="statsSection" class="hidden grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center">
+                <div class="text-sm text-gray-500">អក្សរសរុប</div>
+                <div id="totalChars" class="text-2xl font-bold text-blue-600">0</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center">
+                <div class="text-sm text-gray-500">អក្សរមិនស្ទួន</div>
+                <div id="uniqueChars" class="text-2xl font-bold text-green-600">0</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center col-span-2 sm:col-span-1">
+                <div class="text-sm text-gray-500">ពាក្យសរុប</div>
+                <div id="wordCount" class="text-2xl font-bold text-purple-600">0</div>
+            </div>
+        </div>
 
-Welcome to the Nano-banana curated image gallery! 🤗 
+        <!-- Results Table -->
+        <div id="resultCard" class="hidden glass-morphism rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+            <div class="bg-blue-50 px-6 py-4 border-b border-gray-200">
+                <h2 class="text-lg font-bold text-blue-800">លទ្ធផលនៃការវិភាគ</h2>
+            </div>
+            <div class="max-h-[500px] overflow-y-auto custom-scrollbar">
+                <table class="w-full text-left">
+                    <thead class="bg-gray-50 sticky top-0">
+                        <tr>
+                            <th class="px-6 py-3 text-sm font-bold text-gray-600 border-b">អក្សរ/សញ្ញា</th>
+                            <th class="px-6 py-3 text-sm font-bold text-gray-600 border-b">ចំនួនដង</th>
+                            <th class="px-6 py-3 text-sm font-bold text-gray-600 border-b">ភាគរយ (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultBody" class="divide-y divide-gray-100">
+                        <!-- Content will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="bg-gray-50 px-6 py-3 text-xs text-center text-gray-400">
+                &copy; 2024 រចនាដោយ Rithy × Gemini
+            </div>
+        </div>
+    </div>
 
-**ខ្ញុំបានប្រមូលរូបភាពនិងជម្រុញគួរឱ្យភ្ញាក់ផ្អើលដែលបង្កើតដោយណាណូ-ចេកក្នុងសេណារីយ៉ូភារកិច្ចផ្សេងៗ** ដោយបង្ហាញយ៉ាងទូលំទូលាយនូវលទ្ធភាពគ្មានដែនកំណត់របស់Googleក្នុងការបង្កើតរូបភាពនិងការកែសម្រួល។ យើងសង្ឃឹមថានេះជួយអ្នកឱ្យយល់កាន់តែច្បាស់អំពីណាណូ-ចេក។ តោះដោះសោការបញ្ចូលគ្នាពហុរូបភាពនិងថាមពលកែសម្រួលប្រកបដោយភាពច្នៃប្រឌិតរបស់ណាណូ-ចេកជាមួយគ្នា!
-## 📰 ពត៌មាន
-ពត៌មាននិងធ្វើបច្ចុប្បន្នភាពនៅពេលក្រោយ
-# 🍌🅰🅸 🅿🆁🅾🅼🅿🆃🧚
+    <script>
+        function analyzeText() {
+            const text = document.getElementById('inputText').value;
+            if (!text.trim()) {
+                alert("សូមបញ្ចូលអត្ថបទជាមុនសិន!");
+                return;
+            }
 
-###  ༺ កែប្រែរូបចាស់ឲ្យច្បាស់ថ្មី ༻
-|                              រូបឧទាហរណ៍                              |
-| :------------------------------------------------------------: |
-| <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
+            const charMap = {};
+            // Filter out newlines and handle each character including Khmer clusters correctly
+            // Note: In JS, spread operator [...text] is better for Unicode/Emoji handling
+            const chars = [...text].filter(char => char !== '\n' && char !== '\r');
+            
+            chars.forEach(char => {
+                const displayChar = char === ' ' ? '[ចន្លោះ]' : char;
+                charMap[displayChar] = (charMap[displayChar] || 0) + 1;
+            });
 
-**Prompt:**
+            // Sorting results from highest frequency
+            const sortedChars = Object.entries(charMap).sort((a, b) => b[1] - a[1]);
+            
+            const total = chars.length;
+            const unique = sortedChars.length;
+            const words = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+
+            // Update Stats
+            document.getElementById('totalChars').innerText = total.toLocaleString('km-KH');
+            document.getElementById('uniqueChars').innerText = unique.toLocaleString('km-KH');
+            document.getElementById('wordCount').innerText = words.toLocaleString('km-KH');
+
+            // Render Table
+            const tbody = document.getElementById('resultBody');
+            tbody.innerHTML = '';
+
+            sortedChars.forEach(([char, count]) => {
+                const percentage = ((count / total) * 100).toFixed(2);
+                const row = `
+                    <tr class="hover:bg-blue-50 transition-colors">
+                        <td class="px-6 py-4 font-medium text-gray-900 text-lg">${char}</td>
+                        <td class="px-6 py-4 text-gray-700 font-bold">${count.toLocaleString('km-KH')}</td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-24 bg-gray-200 rounded-full h-2">
+                                    <div class="bg-blue-500 h-2 rounded-full" style="width: ${percentage}%"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-gray-600">${percentage}%</span>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+
+            // Show UI elements
+            document.getElementById('statsSection').classList.remove('hidden');
+            document.getElementById('resultCard').classList.remove('hidden');
+            
+            // Scroll to results on mobile
+            document.getElementById('resultCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function clearAll() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('statsSection').classList.add('hidden');
+            document.getElementById('resultCard').classList.add('hidden');
+            document.getElementById('inputText').focus();
+        }
+    </script>
+</body>
+</html>
 
 ```
-Restore this old, damaged photograph to look clear and natural while preserving the original identity and details. Remove scratches, dust, stains, creases, and film grain. Fix fading, discoloration, and uneven lighting. Reconstruct missing or damaged areas accurately. Enhance sharpness and facial details without over-smoothing. Correct contrast and exposure. Apply realistic colorization if the photo is black and white, keeping skin tones, clothing, and background historically accurate. Maintain the original pose, expression, and proportions. Do not alter facial features, age, or identity. Final result should look like a professionally restored high-quality photograph, not AI-generated. Keep original aspect ratio.
-```
-
-> [!ចំណាំ]
-> **Need to input the required information in {} in the prompt**
-
-
-###  ༺ បំប្លែងរូបថតមនុស្សឱ្យទៅជាតួអង្គតុក្កតា ༻
-|                              រូបឧទាហរណ៍                              |
-| :------------------------------------------------------------: |
-| <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
-
-**Prompt:**
-
-```
-Prompt: Transform the person in the uploaded photo into a full-body stylized Webtoon illustration character. Preserve their exact facial expression, hairstyle, outfit, accessories, and signature features - now extended to include the entire body and pose.
-Art Style:
-
-Clean, expressive Webtoon-style digital illustration
-Sharp, detailed linework with smooth shading and soft gradients
-Subtle anime influence (large eyes, smooth skin, stylized proportions) while remaining grounded in realism
-High-contrast lighting with soft highlights and clear light direction
-Face & Identity:
-Keep the subject's face highly recognizable
-Preserve unique features: eye shape, brows, lips, jawline, skin tone, and hairstyle
-Use gentle digital textures for a polished look
-Clothing & Accessories:
-Accurately recreate the full outfit and accessories from head to toe
-Simplify where needed to match Webtoon style, but retain all identifiable elements 
-
-Include visible jewelry, glasses, logos, or layered fabric details
-Pose & Framing:
-Match the subject's pose and stance from the original reference photo
-Show the entire body in-frame
-- head to shoes - with natural posture and proportions
-Grounded on a soft shadow or simple base, if needed for realism
-Background:
-
-Transparent background (no scenery or setting)
-```
-
-> [!ចំណាំ]
-> **Need to input the required information in {} in the prompt**
-
-
-### ✿༺ ទេវរូបវ័យក្មេងមួយអង្គ ដែលមានព្រះហស្ត ៤ ផ្សេងគ្នា តំណាងឱ្យធាតុទាំង ៤ (ដី ទឹក ភ្លើង ខ្យល់)༻✿
-|                              រូបឧទាហរណ៍                              |
-| :------------------------------------------------------------: |
-| <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
-
-**Prompt:**
-
-```
-A hyper-realistic 8K cinematic photo of a young male deity. His entire body and torso are composed of textured, solid earth and ancient stone with realistic soil grains. He has four distinct arms, each embodying a different element: one arm is made of flowing liquid water, the second arm is engulfed in vibrant flickering flames, the third arm is formed from swirling translucent air and mist, and the fourth arm is solid cracked earth. His face remains highly detailed with natural skin texture and piercing eyes. Natural cinematic lighting, deep soft shadows, dramatic atmosphere, ultra-photorealistic.Serene and elegant expression, soft porcelain skin with natural texture.
-```
-
-> [!ចំណាំ]
-> **Need to input the required information in {} in the prompt**
-
-
-### ❖❀～ គូស្នេហ៍ខ្មែរក្នុងសម្លៀកបំពាក់ប្រពៃណី កាន់ប្រទីបនាពេលរាត្រី ～❀❖ 
-|                              រូបឧទាហរណ៍                              |
-| :------------------------------------------------------------: |
-| <img src="images/pro_case1/output.jpg" width="300" alt="Output Result"> |
-
-**Prompt:**
-
-```
-Hyper-realistic portrait of a young Khmer couple standing on a wooden pier by a lotus pond at night. The man is wearing a traditional gold-toned silk "Pidan" jacket and "Sampot Chang Kben." The woman is wearing a white "Bopha" blouse with a gold silk "Sbai" draped over her shoulder and a patterned "Sampot." Both are holding decorated "Kanthong" baskets with glowing candles, incense, and flowers. A bright full moon hangs in a deep blue twilight sky. Natural soft lighting from the moon and warm golden glow from the candles, visible incense smoke, realistic skin textures, 8k resolution, cinematic composition, shot on 85mm lens.
-```
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+I+am+Rithy!;I+am+a+Content+Creator;I+Love+AI+Art!&center=true&width=400&height=50">
-</a>
-
-
-
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-</div>
-
-
-
-
