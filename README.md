@@ -1,164 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberpunk Neon Clock</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Courier New', Courier, monospace;
-        }
+# 🌐 Cyberpunk Neon Clock (នាឡិកាឌីជីថលបែប Cyberpunk)
 
-        body {
-            background: #0a0a12;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            perspective: 1000px;
-        }
+គម្រោងវេបសាយនាឡិកាឌីជីថលខ្នាតតូច ដែលមានរចនាបថបែប **Cyberpunk Neon** ដ៏ស្រស់ស្អាត។ វាបង្ហាញម៉ោងជាក់ស្ដែងនៅលើប្រព័ន្ធរបស់អ្នក ព្រមទាំងមានឥទ្ធិពលចលនា 3D ប្រែប្រួលទៅតាមកូអរដោនេនៃចលនាម៉ៅស៍ (Mouse Move Effect) ទៀតផង។
 
-        /* Background Grid Lines */
-        body::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background-image: 
-                linear-gradient(rgba(0, 242, 254, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 242, 254, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-            transform: rotateX(60deg);
-            top: -50%;
-            z-index: 1;
-            animation: gridMove 20s linear infinite;
-        }
+---
 
-        @keyframes gridMove {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 800px; }
-        }
+## ✨ លក្ខណៈពិសេស (Features)
+* 🕒 **Real-time Clock:** បង្ហាញម៉ោង នាទី វិនាទី និងថ្ងៃខែឆ្នាំ ត្រឹមត្រូវតាមម៉ោងកុំព្យូទ័រផ្ទាល់ខ្លួន។
+* 🎨 **Cyberpunk Aesthetic:** រចនាឡើងជាមួយពន្លឺ Neon ពណ៌ Cyan និង Pink ឆ្លាស់គ្នា ផ្ដល់អារម្មណ៍បែបបច្ចេកវិទ្យាអនាគត។
+* 🕶️ **3D Mouse Effect:** ប្រអប់នាឡិកានឹងងាករេតាមទិសដៅម៉ៅស៍របស់អ្នក ផ្តល់បទពិសោធន៍ប្លែកភ្នែក (Interactive 3D Effect)។
+* 📱 **Responsive Design:** ដំណើរការបានយ៉ាងរលូនទាំងនៅលើអេក្រង់កុំព្យូទ័រ និងទូរសព្ទដៃ។
 
-        /* Clock Container */
-        .clock-container {
-            position: relative;
-            z-index: 2;
-            background: rgba(10, 10, 18, 0.85);
-            padding: 40px 60px;
-            border-radius: 16px;
-            border: 2px solid #00f2fe;
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.2),
-                        inset 0 0 20px rgba(0, 242, 254, 0.2);
-            backdrop-filter: blur(10px);
-            transition: transform 0.1s ease;
-            transform-style: preserve-3d;
-        }
+---
 
-        .clock-container:hover {
-            box-shadow: 0 0 35px rgba(255, 0, 128, 0.4),
-                        inset 0 0 20px rgba(255, 0, 128, 0.2);
-            border-color: #ff0080;
-        }
+## 🛠️ បច្ចេកវិទ្យាដែលប្រើប្រាស់ (Technologies Used)
+* **HTML5:** សម្រាប់រៀបចំគ្រោងវាក្យសព្ទ និងទម្រង់ប្រអប់។
+* **CSS3:** សម្រាប់បង្កើតពន្លឺ Glow, Background Grid Lines, និងចលនា 3D Perspective។
+* **JavaScript (Vanilla):** សម្រាប់គណនាម៉ោងពិតប្រាកដ និងចាប់យកកូអរដោនេម៉ៅស៍។
 
-        /* Time Display */
-        .time {
-            font-size: 5rem;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 0 0 10px #00f2fe,
-                         0 0 20px #00f2fe,
-                         0 0 40px #00f2fe;
-            letter-spacing: 4px;
-            transition: text-shadow 0.5s ease, color 0.5s;
-        }
+---
 
-        .clock-container:hover .time {
-            color: #fff;
-            text-shadow: 0 0 10px #ff0080,
-                         0 0 20px #ff0080,
-                         0 0 40px #ff0080;
-        }
+## 🚀 របៀបយកទៅសាកល្បងដំណើរការ (Quick Start)
 
-        /* Date Display */
-        .date {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 1.2rem;
-            color: #00f2fe;
-            text-transform: uppercase;
-            letter-spacing: 6px;
-            opacity: 0.8;
-        }
+### ជម្រើសទី ១៖ ដំណើរការលើម៉ាស៊ីនផ្ទាល់ខ្លួន (Local Machine)
+1. ទាញយក ឬចម្លងកូដនៅក្នុងឯកសារ `index.html` នៃ Repository នេះ។
+2. បង្កើតឯកសារថ្មីមួយឈ្មោះ `index.html` លើកុំព្យូទ័ររបស់អ្នក រួច Paste កូដចូល។
+3. ចុច Double-click លើឯកសារនោះ ដើម្បីបើកមើលនៅលើ Web Browser ជាការស្រេច។
 
-        .clock-container:hover .date {
-            color: #ff0080;
-        }
+### ជម្រើសទី ២៖ ដាក់ឱ្យដំណើរការលើអនឡាញ (Deploy to GitHub Pages)
+លោកអ្នកអាចធ្វើការបង្ហោះវេបសាយនេះឱ្យរត់លើអនឡាញដោយឥតគិតថ្លៃតាមជំហានខាងក្រោម៖
+1. ចូលទៅកាន់ **Settings** នៅក្នុង Repository នេះ។
+2. ជ្រើសរើសម៉ឺនុយ **Pages** នៅផ្នែកខាងឆ្វេង (គែមចំហៀង)។
+3. ត្រង់ផ្នែក *Build and deployment -> Branch* សូមប្ដូរពី `None` ទៅជា **`main`** (ឬ `master`) រួចចុច **Save**។
+4. រង់ចាំ ១-២ នាទី លោកអ្នកនឹងទទួលបានតំណភ្ជាប់ (Link) ផ្លូវការដើម្បីចូលមើលវេបសាយ។
 
-        /* Cyberpunk Tag */
-        .tag {
-            position: absolute;
-            top: -12px;
-            left: 30px;
-            background: #ff0080;
-            color: #fff;
-            padding: 2px 10px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 0 0 10px #ff0080;
-        }
+---
 
-        .clock-container:hover .tag {
-            background: #00f2fe;
-            box-shadow: 0 0 10px #00f2fe;
-        }
-    </style>
-</head>
-<body>
+## 📝 គំរូកូដស្នូល (Core Source Code)
 
-    <div class="clock-container" id="clock">
-        <div class="tag">System Status: Online</div>
-        <div class="time" id="time-display">00:00:00</div>
-        <div class="date" id="date-display">LOADING...</div>
-    </div>
+ប្រសិនបើចង់ពិនិត្យមើលកូដរួមទាំងអស់ គឺមាននៅក្នុងឯកសារ `index.html` រួចជាស្រេច ប៉ុន្តែនេះជាផ្នែកកូដស្នូលនៃចលនា 3D ដែលធ្វើឱ្យវេបសាយនេះមានភាពអស្ចារ្យ៖
 
-    <script>
-        // 1. មុខងារដំណើរការម៉ោង និងថ្ងៃខែ
-        function updateClock() {
-            const now = new Date();
-            
-            // ទាញយកម៉ោង នាទី វិនាទី
-            let hours = String(now.getHours()).padStart(2, '0');
-            let minutes = String(now.getMinutes()).padStart(2, '0');
-            let seconds = String(now.getSeconds()).padStart(2, '0');
-            
-            document.getElementById('time-display').textContent = `${hours}:${minutes}:${seconds}`;
-            
-            // ទាញយកថ្ងៃខែឆ្នាំ
-            const options = { year: 'numeric', month: 'short', day: 'numeric' };
-            document.getElementById('date-display').textContent = now.toLocaleDateString('en-US', options);
-        }
-
-        setInterval(updateClock, 1000);
-        updateClock(); // ហៅឱ្យដើរភ្លាមៗពេលបើក Page
-
-        // 2. មុខងារធ្វើឱ្យប្រអប់ម៉ោងមានចលនា 3D តាមកូអរដោនេម៉ៅស៍ (Mouse Move Effect)
-        const clock = document.getElementById('clock');
-        document.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-            clock.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-        });
-
-        // ពេលដកម៉ៅស៍ចេញ ឱ្យវាត្រឡប់មកសភាពដើមវិញ
-        document.addEventListener('mouseleave', () => {
-            clock.style.transform = `rotateY(0deg) rotateX(0deg)`;
-        });
-    </script>
-</body>
-</html>
+```javascript
+// មុខងារធ្វើឱ្យប្រអប់នាឡិកាមានចលនា 3D តាមកូអរដោនេម៉ៅស៍
+const clock = document.getElementById('clock');
+document.addEventListener('mousemove', (e) => {
+    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+    clock.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
