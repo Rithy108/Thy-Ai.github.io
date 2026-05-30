@@ -1,184 +1,164 @@
-```html
 <!DOCTYPE html>
-<html lang="km">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ឧបករណ៍រាប់ចំនួនអក្សរ | Rithy × Gemini</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanten:wght@400;700&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+    <title>Cyberpunk Neon Clock</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
         body {
-            font-family: 'Hanuman', serif;
-            background-color: #f8fafc;
+            background: #0a0a12;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            perspective: 1000px;
         }
-        .khmer-title {
-            font-family: 'Kanten', sans-serif;
+
+        /* Background Grid Lines */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                linear-gradient(rgba(0, 242, 254, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 254, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            transform: rotateX(60deg);
+            top: -50%;
+            z-index: 1;
+            animation: gridMove 20s linear infinite;
         }
-        .glass-morphism {
-            background: rgba(255, 255, 255, 0.95);
+
+        @keyframes gridMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 800px; }
+        }
+
+        /* Clock Container */
+        .clock-container {
+            position: relative;
+            z-index: 2;
+            background: rgba(10, 10, 18, 0.85);
+            padding: 40px 60px;
+            border-radius: 16px;
+            border: 2px solid #00f2fe;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.2),
+                        inset 0 0 20px rgba(0, 242, 254, 0.2);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.1s ease;
+            transform-style: preserve-3d;
         }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
+
+        .clock-container:hover {
+            box-shadow: 0 0 35px rgba(255, 0, 128, 0.4),
+                        inset 0 0 20px rgba(255, 0, 128, 0.2);
+            border-color: #ff0080;
         }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
+
+        /* Time Display */
+        .time {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px #00f2fe,
+                         0 0 20px #00f2fe,
+                         0 0 40px #00f2fe;
+            letter-spacing: 4px;
+            transition: text-shadow 0.5s ease, color 0.5s;
         }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
+
+        .clock-container:hover .time {
+            color: #fff;
+            text-shadow: 0 0 10px #ff0080,
+                         0 0 20px #ff0080,
+                         0 0 40px #ff0080;
         }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
+
+        /* Date Display */
+        .date {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #00f2fe;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            opacity: 0.8;
+        }
+
+        .clock-container:hover .date {
+            color: #ff0080;
+        }
+
+        /* Cyberpunk Tag */
+        .tag {
+            position: absolute;
+            top: -12px;
+            left: 30px;
+            background: #ff0080;
+            color: #fff;
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 0 10px #ff0080;
+        }
+
+        .clock-container:hover .tag {
+            background: #00f2fe;
+            box-shadow: 0 0 10px #00f2fe;
         }
     </style>
 </head>
-<body class="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mx-auto">
-        <!-- Header Section -->
-        <div class="text-center mb-8">
-            <h1 class="khmer-title text-3xl sm:text-4xl font-bold text-blue-800 mb-2">ឧបករណ៍រាប់ចំនួនអក្សរ</h1>
-            <p class="text-gray-600">វិភាគ និងរាប់ចំនួនដងនៃអក្សរនីមួយៗដែលមាននៅក្នុងអត្ថបទរបស់អ្នក</p>
-            <div class="mt-4 inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
-                បង្កើតឡើងដោយ៖ Rithy × Gemini
-            </div>
-        </div>
+<body>
 
-        <!-- Main Card -->
-        <div class="glass-morphism rounded-2xl shadow-xl p-6 mb-8 border border-gray-200">
-            <label for="inputText" class="block text-lg font-bold text-gray-700 mb-2">សូមបញ្ចូលអត្ថបទនៅទីនេះ៖</label>
-            <textarea 
-                id="inputText" 
-                rows="8" 
-                class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-gray-800 bg-white shadow-sm mb-4"
-                placeholder="វាយ ឬចម្លងអត្ថបទរបស់អ្នកដាក់នៅទីនេះ..."></textarea>
-            
-            <div class="flex flex-wrap gap-3">
-                <button 
-                    onclick="analyzeText()" 
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg active:scale-95 flex-grow sm:flex-grow-0">
-                    វិភាគអត្ថបទ
-                </button>
-                <button 
-                    onclick="clearAll()" 
-                    class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 px-8 rounded-xl transition-all flex-grow sm:flex-grow-0">
-                    សម្អាត
-                </button>
-            </div>
-        </div>
-
-        <!-- Stats Grid -->
-        <div id="statsSection" class="hidden grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
-            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div class="text-sm text-gray-500">អក្សរសរុប</div>
-                <div id="totalChars" class="text-2xl font-bold text-blue-600">0</div>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div class="text-sm text-gray-500">អក្សរមិនស្ទួន</div>
-                <div id="uniqueChars" class="text-2xl font-bold text-green-600">0</div>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center col-span-2 sm:col-span-1">
-                <div class="text-sm text-gray-500">ពាក្យសរុប</div>
-                <div id="wordCount" class="text-2xl font-bold text-purple-600">0</div>
-            </div>
-        </div>
-
-        <!-- Results Table -->
-        <div id="resultCard" class="hidden glass-morphism rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-            <div class="bg-blue-50 px-6 py-4 border-b border-gray-200">
-                <h2 class="text-lg font-bold text-blue-800">លទ្ធផលនៃការវិភាគ</h2>
-            </div>
-            <div class="max-h-[500px] overflow-y-auto custom-scrollbar">
-                <table class="w-full text-left">
-                    <thead class="bg-gray-50 sticky top-0">
-                        <tr>
-                            <th class="px-6 py-3 text-sm font-bold text-gray-600 border-b">អក្សរ/សញ្ញា</th>
-                            <th class="px-6 py-3 text-sm font-bold text-gray-600 border-b">ចំនួនដង</th>
-                            <th class="px-6 py-3 text-sm font-bold text-gray-600 border-b">ភាគរយ (%)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="resultBody" class="divide-y divide-gray-100">
-                        <!-- Content will be injected here -->
-                    </tbody>
-                </table>
-            </div>
-            <div class="bg-gray-50 px-6 py-3 text-xs text-center text-gray-400">
-                &copy; 2024 រចនាដោយ Rithy × Gemini
-            </div>
-        </div>
+    <div class="clock-container" id="clock">
+        <div class="tag">System Status: Online</div>
+        <div class="time" id="time-display">00:00:00</div>
+        <div class="date" id="date-display">LOADING...</div>
     </div>
 
     <script>
-        function analyzeText() {
-            const text = document.getElementById('inputText').value;
-            if (!text.trim()) {
-                alert("សូមបញ្ចូលអត្ថបទជាមុនសិន!");
-                return;
-            }
-
-            const charMap = {};
-            // Filter out newlines and handle each character including Khmer clusters correctly
-            // Note: In JS, spread operator [...text] is better for Unicode/Emoji handling
-            const chars = [...text].filter(char => char !== '\n' && char !== '\r');
+        // 1. មុខងារដំណើរការម៉ោង និងថ្ងៃខែ
+        function updateClock() {
+            const now = new Date();
             
-            chars.forEach(char => {
-                const displayChar = char === ' ' ? '[ចន្លោះ]' : char;
-                charMap[displayChar] = (charMap[displayChar] || 0) + 1;
-            });
-
-            // Sorting results from highest frequency
-            const sortedChars = Object.entries(charMap).sort((a, b) => b[1] - a[1]);
+            // ទាញយកម៉ោង នាទី វិនាទី
+            let hours = String(now.getHours()).padStart(2, '0');
+            let minutes = String(now.getMinutes()).padStart(2, '0');
+            let seconds = String(now.getSeconds()).padStart(2, '0');
             
-            const total = chars.length;
-            const unique = sortedChars.length;
-            const words = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
-
-            // Update Stats
-            document.getElementById('totalChars').innerText = total.toLocaleString('km-KH');
-            document.getElementById('uniqueChars').innerText = unique.toLocaleString('km-KH');
-            document.getElementById('wordCount').innerText = words.toLocaleString('km-KH');
-
-            // Render Table
-            const tbody = document.getElementById('resultBody');
-            tbody.innerHTML = '';
-
-            sortedChars.forEach(([char, count]) => {
-                const percentage = ((count / total) * 100).toFixed(2);
-                const row = `
-                    <tr class="hover:bg-blue-50 transition-colors">
-                        <td class="px-6 py-4 font-medium text-gray-900 text-lg">${char}</td>
-                        <td class="px-6 py-4 text-gray-700 font-bold">${count.toLocaleString('km-KH')}</td>
-                        <td class="px-6 py-4">
-                            <div class="flex items-center gap-3">
-                                <div class="w-24 bg-gray-200 rounded-full h-2">
-                                    <div class="bg-blue-500 h-2 rounded-full" style="width: ${percentage}%"></div>
-                                </div>
-                                <span class="text-sm font-semibold text-gray-600">${percentage}%</span>
-                            </div>
-                        </td>
-                    </tr>
-                `;
-                tbody.innerHTML += row;
-            });
-
-            // Show UI elements
-            document.getElementById('statsSection').classList.remove('hidden');
-            document.getElementById('resultCard').classList.remove('hidden');
+            document.getElementById('time-display').textContent = `${hours}:${minutes}:${seconds}`;
             
-            // Scroll to results on mobile
-            document.getElementById('resultCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // ទាញយកថ្ងៃខែឆ្នាំ
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            document.getElementById('date-display').textContent = now.toLocaleDateString('en-US', options);
         }
 
-        function clearAll() {
-            document.getElementById('inputText').value = '';
-            document.getElementById('statsSection').classList.add('hidden');
-            document.getElementById('resultCard').classList.add('hidden');
-            document.getElementById('inputText').focus();
-        }
+        setInterval(updateClock, 1000);
+        updateClock(); // ហៅឱ្យដើរភ្លាមៗពេលបើក Page
+
+        // 2. មុខងារធ្វើឱ្យប្រអប់ម៉ោងមានចលនា 3D តាមកូអរដោនេម៉ៅស៍ (Mouse Move Effect)
+        const clock = document.getElementById('clock');
+        document.addEventListener('mousemove', (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            clock.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        // ពេលដកម៉ៅស៍ចេញ ឱ្យវាត្រឡប់មកសភាពដើមវិញ
+        document.addEventListener('mouseleave', () => {
+            clock.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        });
     </script>
 </body>
 </html>
-
-```
